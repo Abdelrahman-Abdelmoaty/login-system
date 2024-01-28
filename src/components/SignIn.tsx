@@ -40,7 +40,7 @@ export default function SignIn() {
         <Input name="password" placeholder="Password" type="password" />
         {error && (
           <span className="text-sm font-medium text-[#F87171]">
-            Invalid username or password
+            Invalid username/email or password
           </span>
         )}
         <button
