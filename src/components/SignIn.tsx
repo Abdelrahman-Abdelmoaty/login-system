@@ -23,7 +23,7 @@ export default function SignIn() {
 
     if (user) {
       alert("Login Success");
-      open("/thank-you");
+      open("/thank-you", "_self");
     } else {
       setError(true);
     }

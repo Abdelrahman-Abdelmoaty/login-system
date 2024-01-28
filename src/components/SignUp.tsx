@@ -19,7 +19,7 @@ export default function SignUp() {
         },
       );
       alert("Register Success");
-      open("/thank-you");
+      open("/thank-you", "_self");
     } catch (error) {
       console.log(error);
     }
