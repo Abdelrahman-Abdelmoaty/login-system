@@ -35,15 +35,7 @@ export default function SignIn() {
       >
         <span className="hidden text-[30px] font-medium md:block">Sign in</span>
         <Input name="emailOrUsername" placeholder="Enter email or user name" />
-        <div>
-          <Input name="password" placeholder="Password" type="password" />
-          <a
-            href="#"
-            className="ml-auto mt-4 block w-fit text-[13px] leading-normal text-gray-400 transition hover:text-gray-500"
-          >
-            Forgor password ?
-          </a>
-        </div>
+        <Input name="password" placeholder="Password" type="password" />
         <button
           className={cn(
             "rounded-[9px] bg-[#4D47C3] py-[18px] font-medium text-white transition hover:opacity-90 hover:shadow-xl",
