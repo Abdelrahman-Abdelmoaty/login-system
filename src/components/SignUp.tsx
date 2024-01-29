@@ -41,7 +41,10 @@ export default function SignUp() {
           placeholder="Confirm Password"
           type="password"
         />
-        <button className="rounded-[9px] bg-[#4D47C3] py-[18px] font-medium text-white transition hover:opacity-90 hover:shadow-xl">
+        <button
+          className="rounded-[9px] bg-[#4D47C3] py-[18px] font-medium text-white transition hover:opacity-90 hover:shadow-xl"
+          disabled={methods.formState.isSubmitting}
+        >
           Register
         </button>
       </form>

@@ -1,6 +1,6 @@
 "use client";
 import { User } from "@/lib/types-schemas";
-import { createContext, useContext, useEffect } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 export const UsersContext = createContext<User[]>([]);
 
@@ -9,11 +9,11 @@ export function UsersContextProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const users: User[] = [];
+  const [users, setUsers] = useState<User[]>([]);
   useEffect(() => {
     fetch("https://65b6a5cada3a3c16ab010722.mockapi.io/users")
       .then((res) => res.json())
-      .then((data) => users.push(data));
+      .then((data) => setUsers(data));
   }, []);
   return (
     <UsersContext.Provider value={users}>{children}</UsersContext.Provider>

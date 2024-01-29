@@ -13,6 +13,8 @@ export default function SignIn() {
   const users = useUsersContext();
 
   const onSubmit = async (data: LoginSchemaType) => {
+    setError(false);
+
     await new Promise((resolve) => setTimeout(resolve, 1000));
     const user = users.find(
       (user) =>
